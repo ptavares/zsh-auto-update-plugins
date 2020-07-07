@@ -50,7 +50,7 @@ fi
 
 # Upgrade all plugins and call all custom update functions
 function upgrade_oh_my_zsh_custom() {
-  if [[ -z "$ZSH_AUTOUPDATE_PLUGINS_QUIET" ]]; then
+  if [[ -z "$ZSH_AUTOUPDATE_PLUGINS_SILENT" ]]; then
     _zsh_auto_update_log $NONE "blue" "#############################################"
     _zsh_auto_update_log $BOLD "blue" "-> Upgrading all custom plugins..."
   fi
@@ -67,29 +67,29 @@ function upgrade_oh_my_zsh_custom() {
     popd -q
   done
 
-  if [[ -z "$ZSH_AUTOUPDATE_PLUGINS_QUIET" ]]; then
+  if [[ -z "$ZSH_AUTOUPDATE_PLUGINS_SILENT" ]]; then
     _zsh_auto_update_log $BOLD "blue" "-> Calling update custom functions..."
   fi
-  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_DIRENV" ]]; then
+  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_DIRENV" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
     update_zsh_direnv
   fi
-  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_KUBECTX" ]]; then
+  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_KUBECTX" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
     update_zsh_kubectx
   fi
-  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_PKENV" ]]; then
+  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_PKENV" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
     update_zsh_pkenv
   fi
-  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_SDKMAN" ]]; then
+  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_SDKMAN" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
     update_zsh_sdkman
   fi
-  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_TFENV" ]]; then
+  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_TFENV" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
     update_zsh_tfenv
   fi
-  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_TGENV" ]]; then
+  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_TGENV" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
     update_zsh_tgenv
   fi
 
-  if [[ -z "$ZSH_AUTOUPDATE_PLUGINS_QUIET" ]]; then
+  if [[ -z "$ZSH_AUTOUPDATE_PLUGINS_SILENT" ]]; then
     _zsh_auto_update_log $NONE "blue" "#############################################"
   fi
 }
@@ -124,5 +124,8 @@ then
 else
   _update_zsh_custom_update
 fi
+
+# Alias to call upgrade_oh_my_zsh before calling upgrade_oh_my_zsh_custom
+alias upgrade_all_oh_my_zsh='upgrade_oh_my_zsh && upgrade_oh_my_zsh_custom'
 
 unset -f _update_zsh_custom_update _current_date
