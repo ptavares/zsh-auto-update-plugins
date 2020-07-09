@@ -84,6 +84,12 @@ export ZSH_AUTOUPDATE_IGNORE_TGENV=true
 export ZSH_AUTOUPDATE_IGNORE_PKENV=true
 ```
 
+* Disable `exa` auto-update from [zsh-exa](https://github.com/ptavares/zsh-exa) plugin
+
+```shell script
+export ZSH_AUTOUPDATE_IGNORE_EXA=true
+```
+
 ### Silent Mode
 
 To turn off `auto-update-plugins` message, add this variable in your `${HOME}/.zshrc`  
