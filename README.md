@@ -1,5 +1,7 @@
 # zsh-auto-update-plugins
 
+![GitHub](https://img.shields.io/github/license/ptavares/zsh-auto-update-plugins)
+
 [oh-my-zsh plugin](https://github.com/robbyrussell/oh-my-zsh) to update all [oh-my-zsh plugin's](https://github.com/robbyrussell/oh-my-zsh) git-repositories, and my personal zsh plugins stored in $ZSH_CUSTOM folder.
 
 ## Table of content
