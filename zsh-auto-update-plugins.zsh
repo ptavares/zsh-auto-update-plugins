@@ -91,6 +91,9 @@ function upgrade_oh_my_zsh_custom() {
   if [[ -z "$ZSH_AUTOUPDATE_IGNORE_EXA" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
     update_zsh_exa
   fi
+  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_Z" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
+    update_zsh_z
+  fi  
 
   if [[ -z "$ZSH_AUTOUPDATE_PLUGINS_SILENT" ]]; then
     _zsh_auto_update_log $NONE "blue" "#############################################"
