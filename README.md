@@ -92,6 +92,13 @@ export ZSH_AUTOUPDATE_IGNORE_PKENV=true
 export ZSH_AUTOUPDATE_IGNORE_EXA=true
 ```
 
+
+* Disable `z` auto-update from [zsh-z](https://github.com/ptavares/zsh-z) plugin
+
+```shell script
+export ZSH_AUTOUPDATE_IGNORE_Z=true
+```
+
 ### Silent Mode
 
 To turn off `auto-update-plugins` message, add this variable in your `${HOME}/.zshrc`  
