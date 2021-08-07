@@ -132,6 +132,6 @@ else
 fi
 
 # Alias to call upgrade_oh_my_zsh before calling upgrade_oh_my_zsh_custom
-alias upgrade_all_oh_my_zsh='upgrade_oh_my_zsh && upgrade_oh_my_zsh_custom'
+alias upgrade_all_oh_my_zsh='omz update && upgrade_oh_my_zsh_custom'
 
 unset -f _update_zsh_custom_update _current_date
