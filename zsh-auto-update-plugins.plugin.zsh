@@ -71,29 +71,32 @@ function upgrade_oh_my_zsh_custom() {
     _zsh_auto_update_log $BOLD "blue" "-> Calling update custom functions..."
   fi
   if [[ -z "$ZSH_AUTOUPDATE_IGNORE_DIRENV" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
-    update_zsh_direnv
+    type update_zsh_direnv &>/dev/null && update_zsh_direnv || _zsh_auto_update_log $NONE "blue" "-> direnv plugin will not be updated"
   fi
   if [[ -z "$ZSH_AUTOUPDATE_IGNORE_KUBECTX" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
-    update_zsh_kubectx
+    type update_zsh_kubectx &>/dev/null && update_zsh_kubectx || _zsh_auto_update_log $NONE "blue" "-> kubectx plugin will not be updated"
   fi
   if [[ -z "$ZSH_AUTOUPDATE_IGNORE_PKENV" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
-    update_zsh_pkenv
+    type update_zsh_pkenv &>/dev/null && update_zsh_pkenv || _zsh_auto_update_log $NONE "blue" "-> pkenv plugin will not be updated"
   fi
   if [[ -z "$ZSH_AUTOUPDATE_IGNORE_SDKMAN" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
-    update_zsh_sdkman
+    type update_zsh_sdkman &>/dev/null && update_zsh_sdkman || _zsh_auto_update_log $NONE "blue" "-> sdkman plugin will not be updated"
   fi
   if [[ -z "$ZSH_AUTOUPDATE_IGNORE_TFENV" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
-    update_zsh_tfenv
+    type update_zsh_tfenv &>/dev/null && update_zsh_tfenv || _zsh_auto_update_log $NONE "blue" "-> tfenv plugin will not be updated"
   fi
   if [[ -z "$ZSH_AUTOUPDATE_IGNORE_TGENV" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
-    update_zsh_tgenv
+    type update_zsh_tgenv &>/dev/null && update_zsh_tgenv || _zsh_auto_update_log $NONE "blue" "-> tgenv plugin will not be updated"
   fi
   if [[ -z "$ZSH_AUTOUPDATE_IGNORE_EXA" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
-    update_zsh_exa
+    type update_zsh_exa &>/dev/null && update_zsh_exa || _zsh_auto_update_log $NONE "blue" "-> exa plugin will not be updated"
   fi
   if [[ -z "$ZSH_AUTOUPDATE_IGNORE_Z" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
-    update_zsh_z
-  fi  
+    type update_zsh_z &>/dev/null && update_zsh_z || _zsh_auto_update_log $NONE "blue" "-> z plugin will not be updated"
+  fi
+  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_TFSWITCH" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
+    type update_zsh_tfswitch &>/dev/null && update_zsh_tfswitch || _zsh_auto_update_log $NONE "blue" "-> tfswitch plugin will not be updated"
+  fi
 
   if [[ -z "$ZSH_AUTOUPDATE_PLUGINS_SILENT" ]]; then
     _zsh_auto_update_log $NONE "blue" "#############################################"
@@ -105,7 +108,7 @@ if [ -f "${ZSH_CACHE_DIR}/.zsh-custom-update" ]
 then
   . "${ZSH_CACHE_DIR}/.zsh-custom-update"
 
-  # Check if update is needed (by date)
+  # Check if update is needed (by date)
   if [[ -z "$LAST_DATE" ]]
   then
     LAST_DATE=0
