@@ -1,10 +1,28 @@
-# zsh-auto-update-plugins
-
 ![GitHub](https://img.shields.io/github/license/ptavares/zsh-auto-update-plugins)
+![GitHub](https://img.shields.io/github/license/ptavares/zsh-exa)
+![Release](https://img.shields.io/badge/Release_version-0.1.0-blue)
+
+# zsh-auto-update-plugins
 
 [oh-my-zsh plugin](https://github.com/robbyrussell/oh-my-zsh) to update all [oh-my-zsh plugin's](https://github.com/robbyrussell/oh-my-zsh) git-repositories, and my personal zsh plugins stored in $ZSH_CUSTOM folder.
 
 ## Table of content
+
+_This documentation section is generated automatically_
+
+<!--TOC-->
+
+- [zsh-auto-update-plugins](#zsh-auto-update-plugins)
+  - [Table of content](#table-of-content)
+  - [Install](#install)
+  - [Usage](#usage)
+    - [Setup custom days](#setup-custom-days)
+    - [Disable auto-update functions](#disable-auto-update-functions)
+    - [Silent Mode](#silent-mode)
+    - [Force update](#force-update)
+  - [License](#license)
+
+<!--TOC-->
 
 ## Install
 
@@ -37,7 +55,7 @@ export UPDATE_ZSH_DAYS=10
 
 ### Disable auto-update functions
 
-By default, the plugin will call all my plugins custom update functions. 
+By default, the plugin will call all my plugins custom update functions.
 This feature can be disabled exporting some variables in your `${HOME}/.zshrc`.
 
 #### ALL
@@ -48,7 +66,7 @@ This feature can be disabled exporting some variables in your `${HOME}/.zshrc`.
 export ZSH_AUTOUPDATE_IGNORE_ALL=true
 ```
 
-#### Custom 
+#### Custom
 
 * Disable `direnv` auto-update from [zsh-direnv](https://github.com/ptavares/zsh-direnv) plugin
 
@@ -99,9 +117,15 @@ export ZSH_AUTOUPDATE_IGNORE_EXA=true
 export ZSH_AUTOUPDATE_IGNORE_Z=true
 ```
 
+* Disable `tfswith` auto-update from [zsh-tfswitch](https://github.com/ptavares/zsh-tfswitch) plugin
+
+```shell script
+export ZSH_AUTOUPDATE_IGNORE_Z=true
+```
+
 ### Silent Mode
 
-To turn off `auto-update-plugins` message, add this variable in your `${HOME}/.zshrc`  
+To turn off `auto-update-plugins` message, add this variable in your `${HOME}/.zshrc`
 
 ```shell script
 export ZSH_AUTOUPDATE_PLUGINS_SILENT=true
