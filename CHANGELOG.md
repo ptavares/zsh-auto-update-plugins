@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="0.2.0"></a>
+## 0.2.0 (2021-10-10)
+
+### Added
+
+- ✨ 🚨 add zsh-tgswitch support + fix lint [[adab033](https://github.com/ptavares/zsh-auto-update-plugins/commit/adab033bb61430e37bb51904040802fd792ee28e)]
+
+
 <a name="0.1.0"></a>
 ## 0.1.0 (2021-09-05)
 
