@@ -120,7 +120,13 @@ export ZSH_AUTOUPDATE_IGNORE_Z=true
 * Disable `tfswith` auto-update from [zsh-tfswitch](https://github.com/ptavares/zsh-tfswitch) plugin
 
 ```shell script
-export ZSH_AUTOUPDATE_IGNORE_Z=true
+export ZSH_AUTOUPDATE_IGNORE_TFSWITCH=true
+```
+
+* Disable `tgswith` auto-update from [zsh-tgswitch](https://github.com/ptavares/zsh-tgswitch) plugin
+
+```shell script
+export ZSH_AUTOUPDATE_IGNORE_TGSWITCH=true
 ```
 
 ### Silent Mode

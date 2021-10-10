@@ -97,6 +97,9 @@ function upgrade_oh_my_zsh_custom() {
   if [[ -z "$ZSH_AUTOUPDATE_IGNORE_TFSWITCH" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
     type update_zsh_tfswitch &>/dev/null && update_zsh_tfswitch || _zsh_auto_update_log $NONE "blue" "-> tfswitch plugin will not be updated"
   fi
+  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_TGSWITCH" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
+    type update_zsh_tgswitch &>/dev/null && update_zsh_tgswitch || _zsh_auto_update_log $NONE "blue" "-> tgswitch plugin will not be updated"
+  fi
 
   if [[ -z "$ZSH_AUTOUPDATE_PLUGINS_SILENT" ]]; then
     _zsh_auto_update_log $NONE "blue" "#############################################"

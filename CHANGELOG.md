@@ -25,5 +25,3 @@
 - 📝 add z plugin [[02d61ef](https://github.com/ptavares/zsh-auto-update-plugins/commit/02d61ef89b95062a887ef3ec7e6d16efbc013c19)]
 - 📝 add licence badge [[263f2ee](https://github.com/ptavares/zsh-auto-update-plugins/commit/263f2eef0019a4bc5f8fb8dd929835934e926506)]
 - 📝 update documentation [[f59683d](https://github.com/ptavares/zsh-auto-update-plugins/commit/f59683d5edc81ad2c13f3435119cd7b7323282e4)]
-
-
