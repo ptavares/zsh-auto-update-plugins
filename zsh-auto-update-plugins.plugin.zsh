@@ -59,7 +59,7 @@ function upgrade_oh_my_zsh_custom() {
     p=$(dirname "$d")
     pushd -q "${p}"
 
-    if git pull --rebase --stat origin master; then
+    if git pull --rebase --autostash; then
       _zsh_auto_update_log $NONE "blue" "Plugin $d has been updated and/or is at the current version."
     else
       _zsh_auto_update_log $NONE "red" 'There was an error updating. Try again later?'
