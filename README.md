@@ -129,6 +129,12 @@ export ZSH_AUTOUPDATE_IGNORE_TFSWITCH=true
 export ZSH_AUTOUPDATE_IGNORE_TGSWITCH=true
 ```
 
+* Disable `terraform-tools` auto-update from [zsh-terraform](https://github.com/ptavares/zsh-terraform) plugin
+
+```shell script
+export ZSH_AUTOUPDATE_IGNORE_TF_TOOLS=true
+```
+
 ### Silent Mode
 
 To turn off `auto-update-plugins` message, add this variable in your `${HOME}/.zshrc`

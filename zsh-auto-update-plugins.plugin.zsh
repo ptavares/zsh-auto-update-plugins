@@ -100,6 +100,9 @@ function upgrade_oh_my_zsh_custom() {
   if [[ -z "$ZSH_AUTOUPDATE_IGNORE_TGSWITCH" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
     type update_zsh_tgswitch &>/dev/null && update_zsh_tgswitch || _zsh_auto_update_log $NONE "blue" "-> tgswitch plugin will not be updated"
   fi
+  if [[ -z "$ZSH_AUTOUPDATE_IGNORE_TF_TOOLS" ]] || [[ -z "$ZSH_AUTOUPDATE_IGNORE_ALL" ]]; then
+    type update_zsh_terraform &>/dev/null && update_zsh_terraform || _zsh_auto_update_log $NONE "blue" "-> terrafrom plugin will not be updated"
+  fi
 
   if [[ -z "$ZSH_AUTOUPDATE_PLUGINS_SILENT" ]]; then
     _zsh_auto_update_log $NONE "blue" "#############################################"
