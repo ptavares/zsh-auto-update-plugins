@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="0.3.0"></a>
+## 0.3.0 (2022-02-15)
+
+### Added
+
+- ✨ add update zsh-terraform [[7ebc815](https://github.com/ptavares/zsh-auto-update-plugins/commit/7ebc8159d1c348617db56d174acdefbdc15497d8)]
+
+### Fixed
+
+- 🐛 update git rebase command to remove branch name [[0cc1fa0](https://github.com/ptavares/zsh-auto-update-plugins/commit/0cc1fa012419afa5e72dbc1873deeae487499c9c)]
+
+
 <a name="0.2.0"></a>
 ## 0.2.0 (2021-10-10)
 

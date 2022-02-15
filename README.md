@@ -1,6 +1,6 @@
 ![GitHub](https://img.shields.io/github/license/ptavares/zsh-auto-update-plugins)
 ![GitHub](https://img.shields.io/github/license/ptavares/zsh-exa)
-![Release](https://img.shields.io/badge/Release_version-0.2.0-blue)
+![Release](https://img.shields.io/badge/Release_version-0.3.0-blue)
 
 # zsh-auto-update-plugins
 
